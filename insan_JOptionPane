@@ -1,0 +1,35 @@
+package kitap.bolum10.nyp;
+ 
+import javax.swing.JOptionPane ;
+ 
+public class Insan_JOptionPane {
+	
+	static double boy ;
+	static String isim, cinsiyet, boyS, yasS ;
+	static int yas ;
+	
+	static void bilgi (){
+		
+		isim = JOptionPane.showInputDialog("isminizi girin: ");
+		
+		boyS = JOptionPane.showInputDialog("boyunuzu giriniz: ");
+		boy = Double.parseDouble(boyS);
+		
+		yasS = JOptionPane.showInputDialog("yaşınızı giriniz: ");
+		yas = Integer.parseInt(yasS);
+		
+		cinsiyet = JOptionPane.showInputDialog("cinsiyetinizi girin");
+		
+		}
+ 
+	public static void main(String[] args) {
+ 
+		Insan_JOptionPane kisi = new Insan_JOptionPane();
+		
+		bilgi();
+		
+		String mesaj = kisi.isim + "," + kisi.yas + " yaşında " + kisi.boy + " boyunda " + "cinsiyeti ise "+ kisi.cinsiyet ;
+		JOptionPane.showMessageDialog(null,mesaj,"SONUÇ",JOptionPane.INFORMATION_MESSAGE);
+	}
+ 
+}
